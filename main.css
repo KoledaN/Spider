@@ -1,0 +1,318 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;      
+}
+.game-field {
+    position: relative;
+    background: url('pictures/field.jpg') no-repeat center top /cover;
+    min-width: 100%;
+    min-height: 100vh;
+}
+.container {
+    position: relative;
+    padding-left: 1%;
+    padding-right: 1%;
+    max-width: 1550px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+}
+#menu {
+    font-size: 26px;
+    padding: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50vw;
+    height: 45vw;
+    margin: auto;
+    color: white;
+    background: rgba(172, 183, 142, 0.4);
+    box-shadow: 0px 0px 25px 1px #1a1e10;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+#menu div:first-child {
+    padding-top: 70px;
+}
+#menu div {
+    margin: 20px;
+    text-align: center; 
+    cursor: pointer;      
+}
+#menu a {
+    transition: 0.5s;
+    border-bottom: 3px solid transparent; 
+    padding-bottom: 3px;
+}
+#menu a:hover {
+    border-color: white;
+}
+#menu p {
+    font-size: 18px;
+    line-height: 1.4em;
+    text-align: justify;
+}
+#mainback {
+    color: white;
+    position: absolute;
+    bottom: 2vw;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.5s;
+    background: rgba(172, 183, 142, 0.4);
+    cursor: pointer;
+}
+#mainback:hover {
+    box-shadow: 0px 0px 5px yellow;
+}
+div #back {
+    width: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    transition: 0.5s;
+    border-bottom: 3px solid transparent; 
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+#back:hover {
+    border-color: white;
+}
+div #choiceType {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(172, 183, 142, 0.8);
+}
+
+div #choiceType div:first-child,
+#record div:first-child {
+    cursor: default;
+}
+div #choiceType div:not(:first-child),
+#sendRecord {
+    cursor:pointer;
+}
+div #record {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: translateY(-100%);
+    background: rgba(172, 183, 142, 0.8);
+}
+
+#choiceType>div, #record>div {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    display: block;
+    top: 40%;
+    left: 0;
+    right: 0;   
+}
+#choiceType>div div {
+    font-size: 20px;
+    display: inline-block;
+    border: 1px solid yellow;
+    padding: 10px 20px;
+    margin: 40px 20px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+#choiceType div div:hover {
+    background: rgba(172, 183, 142, 1);
+}
+#record div div:first-child {
+    font-size: 30px;
+    margin-top: 10px;
+}
+#record input {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#record input:focus {
+    outline: none;
+    border-color: yellow;
+    box-shadow: 0px 0px 5px yellow;
+}
+#sendRecord {
+    font-size: 30px;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.5s;
+    background: rgba(172, 183, 142, 0.4);
+}
+#sendRecord:hover {
+    box-shadow: 0px 0px 5px yellow;
+}
+div #tableResult {
+    max-width:450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div #tableResult div {
+    float: left;
+    width: 170px;
+    padding: 10px;
+    margin: 0;
+    font-size: 20px;
+}
+div #tableResult div:first-child {
+    padding: 10px;
+    width: 50px;
+}
+div #tableResult div:last-child {
+    width: 170px;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+
+}
+.main-rows>div {
+    position: relative;
+    float:left;
+    border: 3px solid yellow;
+    width: 7.6vw;
+    height: 10.6vw;
+    margin: 2vw 0.6vw;
+    border-radius: 8%;
+}
+.main-rows>div:first-child {
+    margin-left: 0;
+}
+.main-rows>div:last-child {
+    margin-right: 0;
+}
+.main-rows>div>div {
+    width: 8vw;
+    height: 11vw;
+    border: 2px solid lightgray;
+    position: absolute;
+    border-radius: 8%;
+    background-size: cover;
+    transform: translateZ(0);
+}
+.face-down::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url('pictures/5.jpg') no-repeat 0% 0%;
+    background-size: cover;
+    border-radius: 5%;
+
+}
+.game-deck {
+    width: 7.6vw;
+    height: 10.6vw;
+    right: 10vh;
+    bottom: 2vw;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid yellow;
+    border-radius: 5%;
+}
+.newrow {
+    position: absolute;
+    top: -3px;
+    width: 8vw;
+    height: 11vw;
+    background: url('pictures/5.jpg') no-repeat 0% 0%;
+    background-size: cover;
+    border: 2px solid lightgray;
+    border-radius: 5%;
+}
+
+@media only all and (min-width: 1600px) {
+    div.main-rows>div {
+        width: 127px;
+        height: 177px;
+        margin: 40px 12px;
+    }
+    div.main-rows>div>div, div.newrow {
+        width: 130px;
+        height: 180px;
+    }
+    div.game-deck {
+        width: 127px;
+        height: 177px;
+        right: 1%;
+    }
+    div#menu {
+        width: 600px;
+        height: 550px;
+
+    }
+}
+
+@media only all and (max-width: 1150px) {
+    div h1 {
+        margin-bottom: 20px;
+        font-size: 34px;
+    }
+    div#menu p {
+        font-size: 9px;
+    }
+    div div#tableResult div {
+        font-size: 9px;
+        width: 22vw;
+    }
+
+    div div#tableResult div:first-child {
+        width: 4vw;
+    }
+    div div#tableResult div:last-child {
+        width: 7vh;
+    }
+
+}
+
+@media only all and (max-width: 560px) {
+    div.main-rows>div {
+        width: 6.6vw;
+        height: 9.55vw;
+    }
+    div.main-rows>div>div, div.newrow {
+        width: 7.8vw;
+        height: 10.8vw;
+    }
+    div div.game-deck {
+        width: 6.6vw;
+        height: 9.1vw;
+    }
+    div div#menu {
+        width: 80vw;
+        height: 100vw;
+    }
+ }
+
+@media only all and (max-height: 700px) {
+    div#mainback, div div div.game-deck {
+        bottom: 8vw;
+    }   
+}
